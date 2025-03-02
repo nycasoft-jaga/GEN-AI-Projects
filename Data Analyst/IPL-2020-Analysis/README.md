@@ -21,16 +21,9 @@ Cricket is a cornerstone of Indian culture, and the Indian Premier League (IPL) 
 - **Data Sources**: You are not limited to provided sources—explore any relevant, publicly available datasets (e.g., tweets, news articles, Google Trends).
 
 ### Project Structure
-Organize your repository as follows:
-IPL-2020-Analysis/
-  ├── data/                  # Store raw and processed datasets (e.g., tweets, scraped articles)
-  ├── scripts/              # Python/R scripts for scraping, analysis, and visualization
-  │   ├── data_collection/  # Scripts for scraping and fetching data
-  │   ├── analysis/         # Scripts for NLP, sentiment analysis, and statistics
-  │   └── visualization/    # Scripts for generating charts and plots
-  ├── docs/                 # Documentation (e.g., this README, additional notes)
-  ├── output/               # Visualizations, prediction results, and reports
-  └── README.md             # Project overview and instructions
+Here’s a screenshot showing the project tree structure:
+
+[![Project Tree Structure](screenshot.png)](https://github.com/nycasoft-jaga/GEN-AI-Projects/blob/main/Data%20Analyst/IPL-2020-Analysis/IPL-2020-project-structure.png)
 
 To create subdirectories (e.g., `data_collection` inside `scripts`):
 - On GitHub: Use the "Create new file" option and specify the path (e.g., `scripts/data_collection/scrape_twitter.py`).
