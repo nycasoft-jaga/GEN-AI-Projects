@@ -21,7 +21,7 @@ Cricket is a cornerstone of Indian culture, and the Indian Premier League (IPL) 
 - **Data Sources**: You are not limited to provided sources—explore any relevant, publicly available datasets (e.g., tweets, news articles, Google Trends).
 
 ### Project Structure
-Here’s a screenshot showing the project tree structure:
+Click below link to open the project tree structure:
 
 [![Project Tree Structure](screenshot.png)](https://github.com/nycasoft-jaga/GEN-AI-Projects/blob/main/Data%20Analyst/IPL-2020-Analysis/IPL-2020-project-structure.png)
 
