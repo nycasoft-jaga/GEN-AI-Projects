@@ -22,7 +22,7 @@ Cricket is a cornerstone of Indian culture, and the Indian Premier League (IPL) 
 
 ### Project Structure
 Organize your repository as follows:
-  IPL-2020-Analysis/
+IPL-2020-Analysis/
   ├── data/                  # Store raw and processed datasets (e.g., tweets, scraped articles)
   ├── scripts/              # Python/R scripts for scraping, analysis, and visualization
   │   ├── data_collection/  # Scripts for scraping and fetching data
