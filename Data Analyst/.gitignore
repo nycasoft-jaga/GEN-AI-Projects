@@ -1,0 +1,12 @@
+# macOS system files
+.DS_Store
+.DS_Store?
+.Spotlight-V100
+.Trashes
+._*
+
+# IDE specific files
+.idea/
+.vscode/
+*.swp
+*.swo

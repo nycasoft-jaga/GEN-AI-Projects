@@ -1,7 +1,6 @@
-Col_1,Col_2,Col_3,Col_4,Col_5,Col_6,Col_7,Col_8
+Teams,Mat,Won,Lost,Tied,NR,Pts,NRR
 Mumbai Indians,14,9,5,0,0,18,+1.107
 OpponentDescriptionDateResultChennai Super Kings1st Match19 SepLoss by 5 wktsKolkata Knight Riders5th Match23 SepWon by 49 runsRoyal Challengers Bengaluru10th Match28 SepMatch tied (Royal Challengers Bangalore won the Super Over)Punjab Kings13th Match01 OctWon by 48 runsSunrisers Hyderabad17th Match04 OctWon by 34 runsRajasthan Royals20th Match06 OctWon by 57 runsDelhi Capitals27th Match11 OctWon by 5 wktsKolkata Knight Riders32nd Match16 OctWon by 8 wktsPunjab Kings36th Match18 OctMatch tied and Super Over tied - (Kings XI Punjab won the 2nd Super Over)Chennai Super Kings41st Match23 OctWon by 10 wktsRajasthan Royals45th Match25 OctLoss by 8 wktsRoyal Challengers Bengaluru48th Match28 OctWon by 5 wktsDelhi Capitals51st Match31 OctWon by 9 wktsSunrisers Hyderabad56th Match03 NovLoss by 10 wktsDelhi CapitalsQualifier 105 NovWon by 57 runsDelhi CapitalsFinal10 NovWon by 5 wkts,Chennai Super Kings,1st Match,19 Sep,Loss by 5 wkts,Kolkata Knight Riders,5th Match,23 Sep
-,,,,,,,
 Chennai Super Kings,1st Match,19 Sep,Loss by 5 wkts,,,,
 Kolkata Knight Riders,5th Match,23 Sep,Won by 49 runs,,,,
 Royal Challengers Bengaluru,10th Match,28 Sep,Match tied (Royal Challengers Bangalore won the Super Over),,,,
@@ -20,7 +19,6 @@ Delhi Capitals,Qualifier 1,05 Nov,Won by 57 runs,,,,
 Delhi Capitals,Final,10 Nov,Won by 5 wkts,,,,
 Delhi Capitals,14,8,6,0,0,16,-0.109
 OpponentDescriptionDateResultPunjab Kings2nd Match20 SepMatch tied (Delhi Capitals won the Super Over)Chennai Super Kings7th Match25 SepWon by 44 runsSunrisers Hyderabad11th Match29 SepLoss by 15 runsKolkata Knight Riders16th Match03 OctWon by 18 runsRoyal Challengers Bengaluru19th Match05 OctWon by 59 runsRajasthan Royals23rd Match09 OctWon by 46 runsMumbai Indians27th Match11 OctLoss by 5 wktsRajasthan Royals30th Match14 OctWon by 13 runsChennai Super Kings34th Match17 OctWon by 5 wktsPunjab Kings38th Match20 OctLoss by 5 wktsKolkata Knight Riders42nd Match24 OctLoss by 59 runsSunrisers Hyderabad47th Match27 OctLoss by 88 runsMumbai Indians51st Match31 OctLoss by 9 wktsRoyal Challengers Bengaluru55th Match02 NovWon by 6 wktsMumbai IndiansQualifier 105 NovLoss by 57 runsSunrisers HyderabadQualifier 208 NovWon by 17 runsMumbai IndiansFinal10 NovLoss by 5 wkts,Punjab Kings,2nd Match,20 Sep,Match tied (Delhi Capitals won the Super Over),Chennai Super Kings,7th Match,25 Sep
-,,,,,,,
 Punjab Kings,2nd Match,20 Sep,Match tied (Delhi Capitals won the Super Over),,,,
 Chennai Super Kings,7th Match,25 Sep,Won by 44 runs,,,,
 Sunrisers Hyderabad,11th Match,29 Sep,Loss by 15 runs,,,,
@@ -40,7 +38,6 @@ Sunrisers Hyderabad,Qualifier 2,08 Nov,Won by 17 runs,,,,
 Mumbai Indians,Final,10 Nov,Loss by 5 wkts,,,,
 Sunrisers Hyderabad,14,7,7,0,0,14,+0.608
 OpponentDescriptionDateResultRoyal Challengers Bengaluru3rd Match21 SepLoss by 10 runsKolkata Knight Riders8th Match26 SepLoss by 7 wktsDelhi Capitals11th Match29 SepWon by 15 runsChennai Super Kings14th Match02 OctWon by 7 runsMumbai Indians17th Match04 OctLoss by 34 runsPunjab Kings22nd Match08 OctWon by 69 runsRajasthan Royals26th Match11 OctLoss by 5 wktsChennai Super Kings29th Match13 OctLoss by 20 runsKolkata Knight Riders35th Match18 OctMatch tied (Kolkata Knight Riders won the Super Over)Rajasthan Royals40th Match22 OctWon by 8 wktsPunjab Kings43rd Match24 OctLoss by 12 runsDelhi Capitals47th Match27 OctWon by 88 runsRoyal Challengers Bengaluru52nd Match31 OctWon by 5 wktsMumbai Indians56th Match03 NovWon by 10 wktsRoyal Challengers BengaluruEliminator06 NovWon by 6 wktsDelhi CapitalsQualifier 208 NovLoss by 17 runs,Royal Challengers Bengaluru,3rd Match,21 Sep,Loss by 10 runs,Kolkata Knight Riders,8th Match,26 Sep
-,,,,,,,
 Royal Challengers Bengaluru,3rd Match,21 Sep,Loss by 10 runs,,,,
 Kolkata Knight Riders,8th Match,26 Sep,Loss by 7 wkts,,,,
 Delhi Capitals,11th Match,29 Sep,Won by 15 runs,,,,
@@ -59,7 +56,6 @@ Royal Challengers Bengaluru,Eliminator,06 Nov,Won by 6 wkts,,,,
 Delhi Capitals,Qualifier 2,08 Nov,Loss by 17 runs,,,,
 Royal Challengers Bengaluru,14,7,7,0,0,14,-0.172
 OpponentDescriptionDateResultSunrisers Hyderabad3rd Match21 SepWon by 10 runsPunjab Kings6th Match24 SepLoss by 97 runsMumbai Indians10th Match28 SepMatch tied (Royal Challengers Bangalore won the Super Over)Rajasthan Royals15th Match03 OctWon by 8 wktsDelhi Capitals19th Match05 OctLoss by 59 runsChennai Super Kings25th Match10 OctWon by 37 runsKolkata Knight Riders28th Match12 OctWon by 82 runsPunjab Kings31st Match15 OctLoss by 8 wktsRajasthan Royals33rd Match17 OctWon by 7 wktsKolkata Knight Riders39th Match21 OctWon by 8 wktsChennai Super Kings44th Match25 OctLoss by 8 wktsMumbai Indians48th Match28 OctLoss by 5 wktsSunrisers Hyderabad52nd Match31 OctLoss by 5 wktsDelhi Capitals55th Match02 NovLoss by 6 wktsSunrisers HyderabadEliminator06 NovLoss by 6 wkts,Sunrisers Hyderabad,3rd Match,21 Sep,Won by 10 runs,Punjab Kings,6th Match,24 Sep
-,,,,,,,
 Sunrisers Hyderabad,3rd Match,21 Sep,Won by 10 runs,,,,
 Punjab Kings,6th Match,24 Sep,Loss by 97 runs,,,,
 Mumbai Indians,10th Match,28 Sep,Match tied (Royal Challengers Bangalore won the Super Over),,,,
@@ -77,7 +73,6 @@ Delhi Capitals,55th Match,02 Nov,Loss by 6 wkts,,,,
 Sunrisers Hyderabad,Eliminator,06 Nov,Loss by 6 wkts,,,,
 Kolkata Knight Riders,14,7,7,0,0,14,-0.214
 OpponentDescriptionDateResultMumbai Indians5th Match23 SepLoss by 49 runsSunrisers Hyderabad8th Match26 SepWon by 7 wktsRajasthan Royals12th Match30 SepWon by 37 runsDelhi Capitals16th Match03 OctLoss by 18 runsChennai Super Kings21st Match07 OctWon by 10 runsPunjab Kings24th Match10 OctWon by 2 runsRoyal Challengers Bengaluru28th Match12 OctLoss by 82 runsMumbai Indians32nd Match16 OctLoss by 8 wktsSunrisers Hyderabad35th Match18 OctMatch tied (Kolkata Knight Riders won the Super Over)Royal Challengers Bengaluru39th Match21 OctLoss by 8 wktsDelhi Capitals42nd Match24 OctWon by 59 runsPunjab Kings46th Match26 OctLoss by 8 wktsChennai Super Kings49th Match29 OctLoss by 6 wktsRajasthan Royals54th Match01 NovWon by 60 runs,Mumbai Indians,5th Match,23 Sep,Loss by 49 runs,Sunrisers Hyderabad,8th Match,26 Sep
-,,,,,,,
 Mumbai Indians,5th Match,23 Sep,Loss by 49 runs,,,,
 Sunrisers Hyderabad,8th Match,26 Sep,Won by 7 wkts,,,,
 Rajasthan Royals,12th Match,30 Sep,Won by 37 runs,,,,
@@ -94,7 +89,6 @@ Chennai Super Kings,49th Match,29 Oct,Loss by 6 wkts,,,,
 Rajasthan Royals,54th Match,01 Nov,Won by 60 runs,,,,
 Punjab Kings,14,6,8,0,0,12,-0.162
 OpponentDescriptionDateResultDelhi Capitals2nd Match20 SepMatch tied (Delhi Capitals won the Super Over)Royal Challengers Bengaluru6th Match24 SepWon by 97 runsRajasthan Royals9th Match27 SepLoss by 4 wktsMumbai Indians13th Match01 OctLoss by 48 runsChennai Super Kings18th Match04 OctLoss by 10 wktsSunrisers Hyderabad22nd Match08 OctLoss by 69 runsKolkata Knight Riders24th Match10 OctLoss by 2 runsRoyal Challengers Bengaluru31st Match15 OctWon by 8 wktsMumbai Indians36th Match18 OctMatch tied and Super Over tied - (Kings XI Punjab won the 2nd Super Over)Delhi Capitals38th Match20 OctWon by 5 wktsSunrisers Hyderabad43rd Match24 OctWon by 12 runsKolkata Knight Riders46th Match26 OctWon by 8 wktsRajasthan Royals50th Match30 OctLoss by 7 wktsChennai Super Kings53rd Match01 NovLoss by 9 wkts,Delhi Capitals,2nd Match,20 Sep,Match tied (Delhi Capitals won the Super Over),Royal Challengers Bengaluru,6th Match,24 Sep
-,,,,,,,
 Delhi Capitals,2nd Match,20 Sep,Match tied (Delhi Capitals won the Super Over),,,,
 Royal Challengers Bengaluru,6th Match,24 Sep,Won by 97 runs,,,,
 Rajasthan Royals,9th Match,27 Sep,Loss by 4 wkts,,,,
@@ -111,7 +105,6 @@ Rajasthan Royals,50th Match,30 Oct,Loss by 7 wkts,,,,
 Chennai Super Kings,53rd Match,01 Nov,Loss by 9 wkts,,,,
 Chennai Super Kings,14,6,8,0,0,12,-0.455
 OpponentDescriptionDateResultMumbai Indians1st Match19 SepWon by 5 wktsRajasthan Royals4th Match22 SepLoss by 16 runsDelhi Capitals7th Match25 SepLoss by 44 runsSunrisers Hyderabad14th Match02 OctLoss by 7 runsPunjab Kings18th Match04 OctWon by 10 wktsKolkata Knight Riders21st Match07 OctLoss by 10 runsRoyal Challengers Bengaluru25th Match10 OctLoss by 37 runsSunrisers Hyderabad29th Match13 OctWon by 20 runsDelhi Capitals34th Match17 OctLoss by 5 wktsRajasthan Royals37th Match19 OctLoss by 7 wktsMumbai Indians41st Match23 OctLoss by 10 wktsRoyal Challengers Bengaluru44th Match25 OctWon by 8 wktsKolkata Knight Riders49th Match29 OctWon by 6 wktsPunjab Kings53rd Match01 NovWon by 9 wkts,Mumbai Indians,1st Match,19 Sep,Won by 5 wkts,Rajasthan Royals,4th Match,22 Sep
-,,,,,,,
 Mumbai Indians,1st Match,19 Sep,Won by 5 wkts,,,,
 Rajasthan Royals,4th Match,22 Sep,Loss by 16 runs,,,,
 Delhi Capitals,7th Match,25 Sep,Loss by 44 runs,,,,
@@ -128,7 +121,6 @@ Kolkata Knight Riders,49th Match,29 Oct,Won by 6 wkts,,,,
 Punjab Kings,53rd Match,01 Nov,Won by 9 wkts,,,,
 Rajasthan Royals,14,6,8,0,0,12,-0.569
 OpponentDescriptionDateResultChennai Super Kings4th Match22 SepWon by 16 runsPunjab Kings9th Match27 SepWon by 4 wktsKolkata Knight Riders12th Match30 SepLoss by 37 runsRoyal Challengers Bengaluru15th Match03 OctLoss by 8 wktsMumbai Indians20th Match06 OctLoss by 57 runsDelhi Capitals23rd Match09 OctLoss by 46 runsSunrisers Hyderabad26th Match11 OctWon by 5 wktsDelhi Capitals30th Match14 OctLoss by 13 runsRoyal Challengers Bengaluru33rd Match17 OctLoss by 7 wktsChennai Super Kings37th Match19 OctWon by 7 wktsSunrisers Hyderabad40th Match22 OctLoss by 8 wktsMumbai Indians45th Match25 OctWon by 8 wktsPunjab Kings50th Match30 OctWon by 7 wktsKolkata Knight Riders54th Match01 NovLoss by 60 runs,Chennai Super Kings,4th Match,22 Sep,Won by 16 runs,Punjab Kings,9th Match,27 Sep
-,,,,,,,
 Chennai Super Kings,4th Match,22 Sep,Won by 16 runs,,,,
 Punjab Kings,9th Match,27 Sep,Won by 4 wkts,,,,
 Kolkata Knight Riders,12th Match,30 Sep,Loss by 37 runs,,,,
