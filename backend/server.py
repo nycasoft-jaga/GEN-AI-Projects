@@ -110,40 +110,94 @@ class FoodAnalyzer:
     
     @staticmethod
     def classify_processing_level(ingredients: List[str], nutrition: Dict) -> tuple[str, Dict]:
-        """Classify food processing level using NOVA system"""
+        """Classify food processing level using NOVA system with multi-language support"""
         if not ingredients:
             return "Unknown", {"reason": "No ingredients information available"}
         
         ingredients_text = ' '.join(ingredients).lower()
         details = {}
         
-        # Ultra-processed indicators
+        # Multi-language ultra-processed indicators
         ultra_processed_indicators = [
-            'high fructose corn syrup', 'corn syrup', 'artificial flavor', 'artificial colour',
-            'preservative', 'emulsifier', 'stabilizer', 'thickener', 'anti-caking agent',
-            'flavor enhancer', 'maltodextrin', 'modified starch', 'hydrogenated',
-            'partially hydrogenated', 'aspartame', 'sucralose', 'acesulfame'
+            # English
+            'high fructose corn syrup', 'corn syrup', 'artificial flavor', 'artificial colour', 'artificial color',
+            'preservative', 'emulsifier', 'stabilizer', 'stabiliser', 'thickener', 'anti-caking agent',
+            'flavor enhancer', 'flavour enhancer', 'maltodextrin', 'modified starch', 'hydrogenated',
+            'partially hydrogenated', 'aspartame', 'sucralose', 'acesulfame', 'lecithin', 'vanillin',
+            'mono- and diglycerides', 'soy lecithin', 'palm oil', 'polyglycerol', 'carrageenan',
+            # French
+            'sirop de glucose-fructose', 'sirop de glucose', 'arôme artificiel', 'arômes artificiels',
+            'colorant artificiel', 'conservateur', 'émulsifiant', 'stabilisant', 'épaississant',
+            'agent anti-mottant', 'exhausteur de goût', 'lécithines', 'vanilline', 'huile de palme',
+            'mono- et diglycérides', 'lécithine de soja', 'carraghénanes',
+            # German  
+            'glukose-fruktose-sirup', 'glukosesirup', 'künstliche aromen', 'künstlicher farbstoff',
+            'konservierungsstoff', 'emulgator', 'stabilisator', 'verdickungsmittel', 'trennmittel',
+            'geschmacksverstärker', 'lecithin', 'vanillin', 'palmöl', 'mono- und diglyceride',
+            'sojalecithin', 'carrageen',
+            # Spanish
+            'jarabe de glucosa-fructosa', 'jarabe de glucosa', 'aroma artificial', 'colorante artificial',
+            'conservante', 'emulsificante', 'estabilizante', 'espesante', 'antiaglomerante',
+            'potenciador del sabor', 'lecitina', 'vainillina', 'aceite de palma',
+            # Italian
+            'sciroppo di glucosio-fruttosio', 'sciroppo di glucosio', 'aroma artificiale', 'colorante artificiale',
+            'conservante', 'emulsionante', 'stabilizzante', 'addensante', 'antiagglomerante',
+            'esaltatore di sapidità', 'lecitina', 'vanillina', 'olio di palma',
+            # Common E-numbers (universal)
+            'e100', 'e101', 'e102', 'e104', 'e110', 'e120', 'e122', 'e124', 'e129', 'e131', 'e132', 'e133',
+            'e150', 'e151', 'e154', 'e155', 'e160', 'e161', 'e162', 'e163', 'e170', 'e171', 'e172', 'e173',
+            'e174', 'e175', 'e180', 'e200', 'e201', 'e202', 'e203', 'e210', 'e211', 'e212', 'e213', 'e214',
+            'e215', 'e216', 'e217', 'e218', 'e219', 'e220', 'e221', 'e222', 'e223', 'e224', 'e226', 'e227',
+            'e228', 'e234', 'e235', 'e239', 'e242', 'e249', 'e250', 'e251', 'e252', 'e260', 'e261', 'e262',
+            'e263', 'e270', 'e280', 'e281', 'e282', 'e283', 'e290', 'e296', 'e297', 'e300', 'e301', 'e302',
+            'e304', 'e306', 'e307', 'e308', 'e309', 'e310', 'e311', 'e312', 'e315', 'e316', 'e320', 'e321',
+            'e322', 'e325', 'e326', 'e327', 'e330', 'e331', 'e332', 'e333', 'e334', 'e335', 'e336', 'e337',
+            'e338', 'e339', 'e340', 'e341', 'e343', 'e350', 'e351', 'e352', 'e353', 'e354', 'e355', 'e356',
+            'e357', 'e363', 'e380', 'e385', 'e400', 'e401', 'e402', 'e403', 'e404', 'e405', 'e406', 'e407',
+            'e410', 'e412', 'e413', 'e414', 'e415', 'e416', 'e417', 'e418', 'e420', 'e421', 'e422', 'e440',
+            'e450', 'e451', 'e452', 'e459', 'e460', 'e461', 'e462', 'e463', 'e464', 'e465', 'e466', 'e470',
+            'e471', 'e472', 'e473', 'e474', 'e475', 'e476', 'e477', 'e481', 'e482', 'e483', 'e491', 'e492',
+            'e493', 'e494', 'e495', 'e500', 'e501', 'e503', 'e504', 'e507', 'e508', 'e509', 'e511', 'e512',
+            'e513', 'e514', 'e515', 'e516', 'e517', 'e518', 'e519', 'e520', 'e521', 'e522', 'e523', 'e524',
+            'e525', 'e526', 'e527', 'e528', 'e529', 'e530', 'e535', 'e536', 'e538', 'e541', 'e551', 'e552',
+            'e553', 'e554', 'e555', 'e556', 'e558', 'e559', 'e570', 'e574', 'e575', 'e576', 'e577', 'e578',
+            'e579', 'e585', 'e620', 'e621', 'e622', 'e623', 'e624', 'e625', 'e626', 'e627', 'e628', 'e629',
+            'e630', 'e631', 'e632', 'e633', 'e634', 'e635', 'e640', 'e641', 'e650', 'e900', 'e901', 'e902',
+            'e903', 'e904', 'e905', 'e912', 'e914', 'e920', 'e927', 'e928', 'e950', 'e951', 'e952', 'e954',
+            'e955', 'e957', 'e959', 'e961', 'e962', 'e965', 'e966', 'e967', 'e968', 'e999'
         ]
         
         ultra_count = sum(1 for indicator in ultra_processed_indicators if indicator in ingredients_text)
         
-        # Processed indicators
+        # Multi-language processed indicators
         processed_indicators = [
-            'sugar', 'salt', 'oil', 'butter', 'vinegar', 'honey', 'syrup'
+            # English
+            'sugar', 'salt', 'oil', 'butter', 'vinegar', 'honey', 'syrup',
+            # French
+            'sucre', 'sel', 'huile', 'beurre', 'vinaigre', 'miel', 'sirop',
+            # German
+            'zucker', 'salz', 'öl', 'butter', 'essig', 'honig', 'sirup',
+            # Spanish
+            'azúcar', 'sal', 'aceite', 'mantequilla', 'vinagre', 'miel', 'jarabe',
+            # Italian
+            'zucchero', 'sale', 'olio', 'burro', 'aceto', 'miele', 'sciroppo'
         ]
         
         processed_count = sum(1 for indicator in processed_indicators if indicator in ingredients_text)
         
-        # Classification logic
-        if ultra_count >= 2:
+        # Enhanced classification logic with nutritional context
+        sugar_content = nutrition.get('sugars_100g', 0) or 0
+        
+        # Classification logic with additional nutritional context
+        if ultra_count >= 3 or (ultra_count >= 2 and sugar_content > 20):
             details['classification_reason'] = f'Contains {ultra_count} ultra-processing indicators'
-            details['indicators_found'] = [ind for ind in ultra_processed_indicators if ind in ingredients_text]
+            details['indicators_found'] = [ind for ind in ultra_processed_indicators if ind in ingredients_text][:10]  # Limit to first 10
             return "Ultra-processed", details
-        elif ultra_count >= 1 or processed_count >= 3:
-            details['classification_reason'] = f'Contains processing ingredients'
+        elif ultra_count >= 1 or processed_count >= 4 or (processed_count >= 2 and sugar_content > 15):
+            details['classification_reason'] = f'Contains processing ingredients (ultra: {ultra_count}, processed: {processed_count})'
             return "Processed", details
-        elif processed_count >= 1:
-            details['classification_reason'] = 'Contains some processed ingredients'
+        elif processed_count >= 2:
+            details['classification_reason'] = f'Contains some processed ingredients ({processed_count} found)'
             return "Minimally processed", details
         else:
             details['classification_reason'] = 'Contains mainly whole food ingredients'
