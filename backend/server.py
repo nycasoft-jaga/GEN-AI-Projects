@@ -228,47 +228,93 @@ class FoodAnalyzer:
     
     @staticmethod
     def calculate_nutrition_score(nutrition: Dict, processing_level: str, who_compliance: Dict) -> tuple[float, Dict]:
-        """Calculate overall nutrition score (1-5 stars)"""
+        """Calculate overall nutrition score (1-5 stars) with improved logic"""
         score = 3.0  # Start with middle score
         details = {}
         
-        # Processing level impact
+        # Processing level impact (most important factor)
         processing_scores = {
-            "Unprocessed": 2.0,
-            "Minimally processed": 1.0,
-            "Processed": -0.5,
-            "Ultra-processed": -1.5,
-            "Unknown": 0
+            "Unprocessed": 1.5,
+            "Minimally processed": 0.5,
+            "Processed": -0.8,
+            "Ultra-processed": -2.0,  # Heavily penalize ultra-processed
+            "Unknown": -0.5
         }
         
         processing_impact = processing_scores.get(processing_level, 0)
         score += processing_impact
         details['processing_impact'] = f"Processing level ({processing_level}): {processing_impact:+.1f} points"
         
-        # WHO compliance
-        compliance_score = sum(who_compliance.values()) * 0.5
-        score += compliance_score
-        details['who_compliance_impact'] = f"WHO compliance: {compliance_score:+.1f} points"
+        # WHO compliance (critical for health)
+        compliance_count = sum(who_compliance.values())
+        total_guidelines = len(who_compliance)
+        compliance_ratio = compliance_count / total_guidelines if total_guidelines > 0 else 0
         
-        # Nutritional quality
+        # Strong penalty for non-compliance
+        if compliance_ratio == 1.0:  # All compliant
+            compliance_impact = 0.5
+        elif compliance_ratio >= 0.67:  # 2/3 compliant
+            compliance_impact = 0.0
+        elif compliance_ratio >= 0.33:  # 1/3 compliant
+            compliance_impact = -0.5
+        else:  # Most non-compliant
+            compliance_impact = -1.0
+            
+        score += compliance_impact
+        details['who_compliance_impact'] = f"WHO compliance ({compliance_count}/{total_guidelines}): {compliance_impact:+.1f} points"
+        
+        # Nutritional quality bonuses
         fiber = nutrition.get('fiber_100g', 0) or 0
         protein = nutrition.get('proteins_100g', 0) or 0
+        sugars = nutrition.get('sugars_100g', 0) or 0
+        salt = nutrition.get('salt_100g', 0) or 0
         
-        if fiber > 5:
+        # Fiber bonus
+        if fiber > 10:
             score += 0.5
-            details['fiber_bonus'] = "High fiber: +0.5 points"
+            details['fiber_bonus'] = "Very high fiber (>10g): +0.5 points"
+        elif fiber > 5:
+            score += 0.3
+            details['fiber_bonus'] = "High fiber (>5g): +0.3 points"
         
-        if protein > 10:
-            score += 0.5
-            details['protein_bonus'] = "Good protein content: +0.5 points"
+        # Protein bonus
+        if protein > 15:
+            score += 0.3
+            details['protein_bonus'] = "High protein (>15g): +0.3 points"
+        elif protein > 8:
+            score += 0.1
+            details['protein_bonus'] = "Good protein (>8g): +0.1 points"
+        
+        # Sugar penalty (additional to WHO compliance)
+        if sugars > 30:  # Very high sugar
+            score -= 1.0
+            details['sugar_penalty'] = "Very high sugar (>30g): -1.0 points"
+        elif sugars > 15:  # High sugar
+            score -= 0.5
+            details['sugar_penalty'] = "High sugar (>15g): -0.5 points"
+        
+        # Salt penalty (additional to WHO compliance)
+        if salt > 2.0:  # Very high salt
+            score -= 0.5
+            details['salt_penalty'] = "Very high salt (>2g): -0.5 points"
+        elif salt > 1.0:  # High salt
+            score -= 0.2
+            details['salt_penalty'] = "High salt (>1g): -0.2 points"
         
         # Energy density consideration
         energy = nutrition.get('energy-kcal_100g', 0) or 0
-        if energy > 500:  # Very high calorie
-            score -= 0.5
-            details['calorie_penalty'] = "High calorie density: -0.5 points"
+        if energy > 600:  # Very high calorie
+            score -= 0.3
+            details['calorie_penalty'] = "Very high calorie density (>600kcal): -0.3 points"
+        elif energy > 400:  # High calorie
+            score -= 0.1
+            details['calorie_penalty'] = "High calorie density (>400kcal): -0.1 points"
         
-        return max(1.0, min(5.0, score)), details
+        # Ensure score stays within bounds
+        final_score = max(1.0, min(5.0, score))
+        
+        # Round to one decimal place for cleaner display
+        return round(final_score, 1), details
 
 
 @api_router.post("/analyze-product", response_model=ProductAnalysis)
