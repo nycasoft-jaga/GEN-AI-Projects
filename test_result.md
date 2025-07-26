@@ -304,3 +304,5 @@ test_plan:
 agent_communication:
   - agent: "testing"
     message: "Completed comprehensive backend testing. Found critical issues with NOVA classification and nutrition scoring algorithms. The core problem is that the algorithm only works with English ingredients but Open Food Facts returns ingredients in local languages (French for European products). This causes complete failure of processing level classification, which cascades to incorrect nutrition scoring. Diabetic scoring and WHO compliance work correctly. Scan history and caching work properly."
+  - agent: "testing"
+    message: "FRONTEND TESTING COMPLETED: All UI components work perfectly. The frontend correctly displays backend data, but the backend data is incorrect. Confirmed critical issue: Nutella shows as 'Unprocessed' with 5.0/5 health score instead of 'Ultra-processed' with low score. This confirms the backend NOVA classification algorithm is completely broken. Frontend implementation is excellent - the issue is entirely in the backend analysis algorithms. Main agent should focus on fixing the backend NOVA classification to handle non-English ingredients."
